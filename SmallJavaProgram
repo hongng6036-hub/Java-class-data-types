@@ -1,0 +1,42 @@
+package com.TTS;
+import java.util.Scanner;
+    //This imports in the Scanner object package.
+import java.util.Date;
+//This imports in the Date object package.
+
+public class SmallJavaProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); //I forgot to create a new Scanner object
+        System.out.println("What is your name?");
+            //This prompts a question to the user.
+        String Name = input.nextLine();
+            //This read the user's input and assigns it to the string variable Name.
+        System.out.printf("Hello %s! Welcome to this test Java Program.\n", Name);  //Remember to use printF instead of println. Printf allows us to insert our input variable in the return string.
+            //This prints a string "Hello (input Name)! Welcome to this small Java Program."
+        System.out.println("What is your favorite candle scent?");
+        String CandleScent = input.nextLine();
+        System.out.println("Nice!");
+
+        // public static void main(String[] args) I added this and got the "java: illegal start of expression" complier error.
+        //  Random variables assigned and initialized.These are all primitive types.
+        int myAge = 27; //This is a variable 'myAge'. It's an integer and the value is 30.
+            byte herAge = (byte)myAge; //Byte (1) types take up less space than an integer (4).
+            long totalAmountofCandles = 3_050_940L; //Number is too large for a integer. I had to change it to long and use the suffice L.
+            float candlePrice = 20.99F;  //I got a compiler message that the float type is wrong, because it needs to be double for 2 place decimal points.I had to use the suffix F.
+            char nameFirstLetter = 'H'; // single characters should always be in single quotes '', double characters should be in double quotes "".
+            boolean drinkingAgeMet = true; //This is a boolean type.
+        System.out.println(myAge); //This prints the line for my variable myAge.
+        System.out.println(herAge); //This prints the line for my variable herAge.
+        System.out.println(totalAmountofCandles); //This prints the line for my variable totalAmountofCandles.
+        System.out.println(candlePrice); //This prints the line for my variable candlePrice.
+        System.out.println(nameFirstLetter); //This prints the line for my variable nameFirstLetter.
+        System.out.println(drinkingAgeMet); //This prints the line for my variable drinkingAgeMet.
+
+                //Random variables assigned and initialized. These will be reference types
+                byte age = 27;
+                Date now = new Date(); //I got the error "java: cannot find symbol". That's because I didn't import the package for Date.
+                    //I had to add import java.util.Date; at the very top.
+                System.out.println(now); //This will print out the date
+
+    }
+}
